@@ -7,6 +7,11 @@
     background-repeat: no-repeat;
     max-width: 1920px;
     width: 100%;
+     @include mobile() {
+        background-image: url(../../assets/images/hero-background-image.png);
+    background-repeat: no-repeat;
+        background-size: cover;
+     }
   }
   &__wrapper {
     padding-top: 67px;
@@ -26,7 +31,7 @@
       max-width: 500px;
       background-color: transparent;
       border: none;
-      margin-left: 16px;
+      margin-left: 26px;
     }
     &-title {
       h2 {
@@ -69,6 +74,9 @@
       &-column3 {
         @include description;
         max-width: 454px;
+        @include mobile() {
+            max-width: 400px;
+        }
       }
     }
   }
