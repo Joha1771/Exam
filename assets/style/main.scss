@@ -1,0 +1,16 @@
+@import './base/variables';
+@import './base/fonts';
+@import './base/base';
+@import './mixins/mixin';
+@import './mixins/media-mixin';
+@import './mixins/sections-mixin';
+
+@import './sections/hero';
+@import './sections/header';
+@import './sections/about';
+@import './sections/contact';
+@import './sections/price';
+@import './sections/features';
+@import './sections/catalog';
+@import './sections/consultation';
+@import './sections/footer';

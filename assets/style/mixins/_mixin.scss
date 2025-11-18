@@ -1,0 +1,13 @@
+@mixin buttons{
+    display: flex;
+      align-items: center;
+      gap: 6px;
+    font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      color: $accent-color;
+      background-color: $secondary-color;
+      border-radius: 8px;
+}

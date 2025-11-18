@@ -1,0 +1,31 @@
+.header {
+  @include center;
+  &__wrapper {
+    display: flex;
+    gap: 28px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    &-list {
+      display: flex;
+      gap: 48px;
+    }
+    &-link {
+        
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      color: $primary-color;
+    }
+  }
+  &__contact {
+    padding-left: 27px;
+    @include center;
+    &-number {
+      @include buttons;
+      padding: 16px 28px;
+    }
+  }
+}
