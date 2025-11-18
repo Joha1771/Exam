@@ -1,8 +1,12 @@
 .header {
   @include center;
+  padding-top: 10px;
   &__wrapper {
     display: flex;
     gap: 28px;
+  }
+  &__menu{
+    display: none;
   }
   &__nav {
     display: flex;

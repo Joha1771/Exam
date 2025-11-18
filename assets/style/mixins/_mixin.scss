@@ -1,13 +1,82 @@
-@mixin buttons{
-    display: flex;
-      align-items: center;
-      gap: 6px;
+@mixin buttons {
+  display: flex;
+
+  cursor: pointer;
+  align-items: center;
+  gap: 6px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: $accent-color;
+  background-color: $secondary-color;
+  border-radius: 8px;
+}
+@mixin description {
+  display: flex;
+  gap: 20px;
+  p {
     font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 36px;
+    color: $primary-color;
+  }
+}
+@mixin about-cards($width: 353px, $height: 246px) {
+  width: $width;
+  height: $height;
+  padding: 51px 47px 41px 41px;
+  border-bottom: 1px #d6a7af;
+  border-right: 1px #d6a7af;
+  border-bottom-style: dashed;
+  border-right-style: dashed;
+
+  @include column;
+  gap: 20px;
+  &-title {
+    display: flex;
+    gap: 31px;
+    p {
+      font-family: "Montserrat";
       font-weight: 700;
+      font-style: Bold;
+      font-size: 60px;
+      line-height: 69px;
+      color: $secondary-color;
+    }
+  }
+  &-description {
+    max-width: 317px;
+    p {
+      font-family: "Montserrat";
+      font-weight: 500;
       font-size: 18px;
       line-height: 26px;
-      text-align: center;
-      color: $accent-color;
-      background-color: $secondary-color;
-      border-radius: 8px;
+      color: $primary-color;
+    }
+  }
+}
+@mixin contact-cards($width: 324px) {
+  width: $width;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &-icon {
+    img {
+      padding: 12px 11px;
+      border-radius: 10px;
+      border: 3px solid #fa002c26;
+    }
+  }
+  &-description {
+    p {
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: $primary-color;
+    }
+  }
 }
