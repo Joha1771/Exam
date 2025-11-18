@@ -1,0 +1,32 @@
+.maps {
+  @include center;
+  padding-top: 150px;
+  padding-bottom: 110px;
+  &__wrapper {
+    @include column;
+    gap: 32px;
+  }
+  &__cards {
+    display: flex;
+    gap: 28px;
+    @include mobile (){
+        @include column
+    }
+ 
+  &-map1 {
+    @include maps-cards;
+  }
+    &-map2 {
+      @include maps-cards;
+    }
+}
+  &__title {
+    h4 {
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 69px;
+      color: $primary-color;
+    }
+  }
+}

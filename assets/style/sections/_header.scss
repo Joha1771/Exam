@@ -4,13 +4,23 @@
   &__wrapper {
     display: flex;
     gap: 28px;
+    @include mobile(){
+        display: flex;
+        gap: 100px;
+    }
   }
   &__menu{
     display: none;
+@include mobile(){
+        display: flex;
+    }
   }
   &__nav {
     display: flex;
     align-items: center;
+    @include mobile(){
+        display: none;
+    }
     &-list {
       display: flex;
       gap: 48px;
@@ -22,14 +32,25 @@
       font-size: 16px;
       line-height: 100%;
       color: $primary-color;
+      &:hover{
+        color: $secondary-color;
+        transition: all 0.3s ease;
+      }
     }
   }
   &__contact {
     padding-left: 27px;
     @include center;
+    @include mobile(){
+        display: none;
+    }
     &-number {
       @include buttons;
       padding: 16px 28px;
+      &:hover{
+        box-shadow: 0px 12px 60px 0px #FA002C66;
+        transition: all 0.3s ease;
+      }
     }
   }
 }

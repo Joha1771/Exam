@@ -1,0 +1,130 @@
+.price {
+  @include center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #F4F6F8;
+  &__wrapper {
+    @include column;
+    gap: 24px;
+    @include mobile(){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  &__title {
+    max-width: 801px;
+    padding-bottom: 18px;
+    @include mobile(){
+        max-width: 400px;
+    }
+    h3 {
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 69px;
+      color: $primary-color;
+      @include mobile(){
+        font-size: 28px;
+        padding-left: 26px;
+      }
+    }
+  }
+  &__conclusion {
+    @include column;
+    gap: 24px;
+    &-column1 {
+      @include price__conclusion-columns;
+      color: $secondary-color;
+    }
+    &-column2 {
+      @include price__conclusion-columns;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 28px;
+    border-bottom: 1px solid #c2c2c2;
+    padding-bottom: 50px;
+    @include mobile(){
+        display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-left:0px;
+    }
+    &-card1 {
+      background-image: url(../../assets/images/price-car-image.png);
+      background-repeat: no-repeat;
+      box-shadow: inset 26px 0px 40px 14px rgba(104, 117, 160, 0.33);
+      background-color: $accent-color;
+      box-shadow: 0px 10px 50px 0px #00000033;
+      background-size: cover;
+      border-radius: 36px;
+      padding: 48px 30px 36px 40px;
+      max-width: 461px;
+      @include column;
+      @include mobile(){
+    max-width: 380px
+  }
+        &:hover{
+    background-color: $accent-color;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    transform: scale(1.1)
+  }
+      &-title {
+        h4 {
+          font-family: "Montserrat";
+          font-weight: 600;
+          font-size: 30px;
+          line-height: 100%;
+          color: $accent-color;
+        }
+      }
+      &-description {
+        p {
+          font-family: "Montserrat";
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 26px;
+          color: $accent-color;
+        }
+      }
+      &-wrapper {
+        @include column;
+        gap: 16px;
+      }
+      &-money {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 100%;
+        color: $accent-color;
+        span {
+          font-size: 60px;
+        }
+      }
+      gap: 150px;
+    }
+    &-card2 {
+      @include price-cards;
+      gap: 49px;
+    }
+    &-card3 {
+      @include price-cards;
+      gap: 150px;
+    }
+    &-card4 {
+      @include price-cards;
+      gap: 150px;
+    }
+    &-card5 {
+      @include price-cards;
+      gap: 50px;
+    }
+    &-card6 {
+      @include price-cards;
+      gap: 150px;
+    }
+  }
+}

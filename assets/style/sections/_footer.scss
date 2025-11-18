@@ -1,0 +1,94 @@
+.footer {
+  @include center;
+  background-color: #eeeeee;
+  padding-top: 50px;
+  padding-bottom: 38px;
+  &__wrapper {
+    display: flex;
+    gap: 89px;
+     @include mobile(){
+        @include column;
+        gap: 50px;
+        padding-left: 16px;
+     }
+  }
+  &__column1 {
+    @include column;
+    padding-right: 3px;
+    gap: 16px;
+    &-description {
+      max-width: 428px;
+      p {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #292929;
+      }
+    }
+  }
+  &__column2 {
+    @include column;
+    gap: 16px;
+    span {
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: $primary-color;
+    }
+  }
+  &__column3 {
+    @include column;
+    padding-right: 206px;
+    gap: 16px;
+    span {
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: $primary-color;
+    }
+  }
+  &__column4 {
+    @include column;
+    
+    gap: 16px;
+    button {
+      @include buttons;
+      @include mobile(){
+        display: flex;
+        align-items: center;
+        align-items: center;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 28px;
+      @include mobile(){
+        padding: 16px 58px;
+      }
+    }
+    &-description {
+      display: flex;
+      gap: 6px;
+      max-width: 239px;
+      p {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #292929;
+      }
+    }
+  }
+  &__columns-wrapper{
+    display: flex;
+    gap: 90px;
+    @include mobile(){
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+  }
+}

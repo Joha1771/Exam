@@ -28,4 +28,10 @@ button{
 }
 .container{
     max-width: 1457px;
+    @media (min-width: 1320px) and (max-width: 1636px){
+        max-width: 1280px;
+    }
+    @media (min-width:320px) and (max-width:1319px ){
+        max-width: 768px;
+    }
 }

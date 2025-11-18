@@ -32,12 +32,43 @@
   border-right: 1px #d6a7af;
   border-bottom-style: dashed;
   border-right-style: dashed;
+  cursor: pointer;
+  @include mobile() {
+    border: none;
+    display: flex;
+    gap: 10px;
+    padding: 0px 20px;
+    width: 353x;
+    height: 100px;
+  }
+  &:hover {
+    background-color: $accent-color;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+    @include mobile() {
+      transform: scale(1);
+    }
+  }
+  &-wrapper {
+    @include mobile() {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
 
   @include column;
   gap: 20px;
   &-title {
     display: flex;
     gap: 31px;
+
+    img {
+      @include mobile() {
+        display: none;
+      }
+    }
     p {
       font-family: "Montserrat";
       font-weight: 700;
@@ -63,6 +94,13 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding: 20px 44px 20px 20px;
+  border-radius: 20px;
+  &:hover {
+    transition: all 0.3s ease;
+    background-color: $accent-color;
+    box-shadow: 0px 2px 50px 0px #0000001f;
+  }
   &-icon {
     img {
       padding: 12px 11px;
@@ -77,6 +115,303 @@
       font-size: 18px;
       line-height: 26px;
       color: $primary-color;
+    }
+  }
+}
+
+@mixin catalog-cards($width: 461px, $height: 764px) {
+  width: $width;
+  height: $height;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: $accent-color;
+  box-shadow: 0px 2px 50px 0px #0000001f;
+  border-radius: 36px;
+  @include mobile() {
+    max-width: 390px;
+    height: 800px;
+  }
+  &-image {
+    padding: 15px 15px 8px 15px;
+  }
+  &-content {
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+  &-title {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    color: $primary-color;
+  }
+  &-statistics {
+    border-bottom: 1px solid #c1c1c1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+    gap: 10px;
+    span {
+      display: flex;
+      gap: 12px;
+      p {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: $primary-color;
+      }
+    }
+  }
+  &-prices {
+    display: flex;
+    gap: 27px;
+    @include mobile() {
+      @include column;
+    }
+    &-price1 {
+      max-width: 175px;
+      padding-top: 16px;
+      @include column;
+      gap: 3px;
+      &-title {
+        h4 {
+          font-family: "Montserrat";
+          font-weight: 500;
+          font-size: 25px;
+          line-height: 100%;
+          color: $primary-color;
+        }
+      }
+      &-description {
+        p {
+          font-family: "Montserrat";
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: #2b2b2b;
+        }
+      }
+    }
+    &-price2 {
+      @include column;
+      gap: 4px;
+      padding: 16px 51px 16px 21px;
+      background-color: #fee5e9;
+      border-top-left-radius: 36px;
+      border-bottom-left-radius: 36px;
+      &-title {
+        font-family: "Montserrat";
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 100%;
+        color: #fa002c;
+      }
+      &-description {
+        p {
+          font-family: "Montserrat";
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: #2b2b2b;
+        }
+      }
+    }
+  }
+  &-button {
+    display: flex;
+    padding-top: 24px;
+    @include mobile() {
+      display: flex;
+      justify-content: center;
+      padding-right: 20px;
+    }
+    button {
+      @include buttons;
+      padding: 26px 108px;
+      border-radius: 18px;
+      border: 1px solid $secondary-color;
+      @include mobile() {
+        padding: 16px 50px;
+      }
+      &:hover {
+        border: 1px solid $secondary-color;
+        background-color: transparent;
+        color: $primary-color;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+@mixin price__conclusion-columns {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  padding-left: 200px;
+  @include mobile() {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+  }
+  &-icon {
+    display: none;
+  }
+  &-description {
+    p {
+      font-family: "Montserrat";
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 100%;
+      color: $primary-color;
+    }
+  }
+  &-value {
+    h4 {
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 100%;
+      span {
+        font-size: 60px;
+      }
+    }
+  }
+}
+@mixin price-cards($width: 461px, $height: 389px) {
+  width: $width;
+  height: $height;
+  background-color: $accent-color;
+  box-shadow: 0px 10px 50px 0px #00000033;
+  border-radius: 36px;
+  padding: 48px 30px 36px 40px;
+  @include mobile() {
+    max-width: 380px;
+  }
+  @include column;
+  &:hover {
+    background-color: $accent-color;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+  }
+  &-title {
+    h4 {
+      font-family: "Montserrat";
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 100%;
+      color: $primary-color;
+    }
+  }
+  &-description {
+    p {
+      font-family: "Montserrat";
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: #666666;
+    }
+  }
+  &-wrapper {
+    @include column;
+    gap: 16px;
+  }
+  &-money {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    color: $primary-color;
+    span {
+      font-size: 60px;
+    }
+  }
+}
+@mixin features-column($width: 420px) {
+  display: flex;
+  width: $width;
+  gap: 30px;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: 30px;
+  &-desctiption {
+    p {
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: $primary-color;
+      &:hover {
+        color: $secondary-color;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+@mixin features-button {
+  padding: 30px 26px;
+  border-radius: 100%;
+}
+@mixin maps-cards($width: 706px, $height: 498px) {
+  width: $width;
+  height: $height;
+  border: 7px solid #fa002c33;
+  border-radius: 36px;
+  @include mobile (){
+    max-width: 420px;
+    max-height: 400px
+  }
+  &-image {
+    padding: 25px 24px 34px 24px;
+  }
+  &-content {
+    @include column;
+    padding: 0px 48px 44px 48px;
+    gap: 14px;
+    
+    &-title {
+        @include mobile (){
+        gap: 4px;
+    }
+      display: flex;
+      gap: 80px;
+      h5 {
+        font-family: "Montserrat";
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 100%;
+        color: $primary-color;
+        @include mobile (){
+            max-width: 150px;
+        }
+      }
+      a {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 100%;
+        color: $primary-color;
+        @include mobile (){
+            font-size: 23px;
+            display: flex;
+            align-items: center;
+        }
+      }
+    }
+    &-description {
+      display: flex;
+      gap: 6px;
+      p {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #292929;
+      }
     }
   }
 }

@@ -1,0 +1,58 @@
+.catalog {
+  @include center;
+  padding-bottom: 100px;
+  &__wrapper {
+    @include column;
+    gap: 32px;
+  }
+  &__title {
+    @include mobile(){
+        padding-left: 26px;
+      }
+    h3 {
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 69px;
+      color: $primary-color;
+      @include mobile(){
+        font-size: 28px;
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    gap: 29px;
+       @include mobile(){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-card1 {
+      @include catalog-cards;
+   
+    }
+    &-card2 {
+      @include catalog-cards;
+      @include mobile(){
+        display: none;
+      }
+    }
+    &-card3 {
+      @include catalog-cards;
+      @include mobile(){
+        display: none;
+      }
+    }
+  }
+  &-money {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    color: $primary-color;
+    span{
+        font-size: 60px;
+    }
+  }
+}

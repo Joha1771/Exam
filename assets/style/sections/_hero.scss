@@ -22,6 +22,12 @@
     background: #ffffffa3;
     padding: 40px 30px 20px 40px;
     border-radius: 24px;
+    @include mobile() {
+      max-width: 500px;
+      background-color: transparent;
+      border: none;
+      margin-left: 16px;
+    }
     &-title {
       h2 {
         font-family: "Montserrat";
@@ -30,6 +36,19 @@
         line-height: 90px;
         text-transform: uppercase;
         color: #282828;
+        span {
+          @include mobile() {
+            display: none;
+          }
+        }
+        @include mobile() {
+          font-family: "Montserrat";
+          font-weight: 800;
+          font-size: 70px;
+          line-height: 90px;
+          text-transform: uppercase;
+          color: #282828;
+        }
       }
     }
     &-description {
@@ -57,17 +76,54 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    @include mobile() {
+        @include column
+    }
+    &-wrapper{
+        display: flex;
+        gap: 18px;
+    }
     &-button {
       button {
         @include buttons;
         padding: 26px 36px;
+        border: 1px solid $secondary-color;
+        &:hover {
+          transition: all 0.3s ease;
+          background-color: transparent;
+          border: 1px solid $secondary-color;
+          color: $primary-color;
+        }
+      }
+    }
+    &-telegram {
+      img {
+        &:hover {
+          cursor: pointer;
+          transition: all 0s ease;
+          transform: scale(1.1);
+        }
+      }
+    }
+    &-youtube {
+      img {
+        &:hover {
+          cursor: pointer;
+          transition: all 0s ease;
+          transform: scale(1.1);
+        }
       }
     }
   }
   &__car-image {
+    display: flex;
     width: 1700px;
     position: absolute;
-    right: -190px;
-    bottom: -175px;
+    right: -787px;
+    bottom: 20px;
+    @media (max-width: 1470px) {
+      display: none;
+      position: none;
+    }
   }
 }
