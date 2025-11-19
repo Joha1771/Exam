@@ -10,17 +10,31 @@
     display: flex;
     gap: 28px;
     @include mobile (){
-        @include column
+        @include column;
+        padding-left: 16px;
+        max-width: 500px;
     }
  
   &-map1 {
     @include maps-cards;
+     @include mobile (){
+        padding-left: 26px;
+        max-width: 400px;
+    }
   }
     &-map2 {
       @include maps-cards;
+       @include mobile (){
+        padding-left: 26px;
+        max-width: 400px;
+    }
     }
 }
   &__title {
+     @include mobile (){
+      display: flex;
+      justify-content: center;
+     }
     h4 {
       font-family: "Montserrat";
       font-weight: 700;

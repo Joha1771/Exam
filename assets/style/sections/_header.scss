@@ -6,7 +6,14 @@
     gap: 28px;
     @include mobile(){
         display: flex;
-        gap: 100px;
+        gap: 70px;
+    }
+  }
+  &__logo{
+    img{
+      @include mobile(){
+        width: 200px;
+      }
     }
   }
   &__menu{

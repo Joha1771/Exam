@@ -22,6 +22,9 @@
     font-size: 26px;
     line-height: 36px;
     color: $primary-color;
+     @include mobile(){
+    font-size: 18px;
+     }
   }
 }
 @mixin about-cards($width: 353px, $height: 246px) {
@@ -139,6 +142,7 @@
     padding-left: 32px;
     display: flex;
     flex-direction: column;
+     
   }
   &-title {
     font-family: "Montserrat";

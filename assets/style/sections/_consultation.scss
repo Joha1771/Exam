@@ -56,6 +56,9 @@
         padding: 26px 44px;
         border-radius: 18px;
         border: 1px solid $secondary-color;
+         @include mobile{
+          padding: 26px 24px;
+         }
         &:hover{
             background-color: transparent;
             color: $primary-color;
@@ -70,13 +73,13 @@
     bottom: -35px;
     @include mobile (){
        position: absolute;
-    right: -35px;
+    right: 0px;
     bottom: -100px; 
     }
     img {
       width: 840px;
       @include mobile (){
-        width: 700px;
+        width: 400px;
       }
     }
   }
